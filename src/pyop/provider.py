@@ -74,8 +74,6 @@ class Provider(object):
         _scopes.extend(self.extra_scopes.keys())
         self.configuration_information['scopes_supported'] = list(set(_scopes))
 
-        self.configuration_information.verify()
-
         self.authz_state = authz_state
         self.clients = clients
         self.userinfo = userinfo
